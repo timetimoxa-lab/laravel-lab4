@@ -1,0 +1,31 @@
+// ===== Переопределение переменных Bootstrap (до импорта bootstrap) =====
+
+// Собственный breakpoint xxxl для широких экранов
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1500px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1440px
+);
+
+$primary: #3b4cca;
+$body-bg: #ffffff;
+$body-color: #212529;
+$font-family-sans-serif: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+$border-radius: .6rem;
+$popover-bg: #fff8e1;
+$popover-body-color: #3b2f00;
+$popover-header-bg: #ffe08a;
+$popover-header-color: #3b2f00;
