@@ -13,6 +13,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', fn () => redirect()->route('films.index'))->name('dashboard');
 
     // ---- Фильмы (CRUD) ----
+    // Мгновенная проверка дубликатов (AJAX) — обязательно ДО Route::resource('films', ...)
+    Route::get('films/check-duplicate', [FilmController::class, 'checkDuplicate'])
+        ->name('films.check-duplicate');
+
     // withTrashed(['show']) — админ может открыть страницу мягко удалённого фильма
     Route::resource('films', FilmController::class)->withTrashed(['show']);
     Route::patch('films/{film}/restore', [FilmController::class, 'restore'])->withTrashed()->name('films.restore');
